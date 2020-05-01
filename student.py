@@ -8,7 +8,7 @@
 # The collection of exercises that the student is currently working on
 
 
-class Students:
+class Student:
 
     def __init__(self, firstName, lastName, slack):
         self.firstName = firstName
@@ -16,3 +16,11 @@ class Students:
         self.slack = slack
         self.cohort = ""
         self.exercises = list()
+
+    def student_summary(self):
+        print(f"----Student Summary----")
+        print(f"{self.firstName} {self.lastName}")
+        print(f"Slack: {self.slack}")
+        print(f"Assigned Exercises:")
+        for exercise in self.exercises:
+            print(f"{exercise.name} {exercise.language}")
